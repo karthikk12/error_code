@@ -65,6 +65,10 @@ var start_str0=document.getElementById("error_code").value;
  event.preventDefault();
  }
    else if(str0==1001 || str0==1002 ){
+   document.getElementById('display1').innerHTML=""
+   document.getElementById('display2').innerHTML = " "; 
+   document.getElementById('display3').innerHTML = " "
+	 document.getElementById('display4').innerHTML = " ";
   var message2='There is some JIRA/Known Issue for this..Please check it out....'
  document.getElementById('display5').innerHTML = message2;
  event.preventDefault();
@@ -99,7 +103,7 @@ var message='Sorry Its not in out List..Please ask your TL/Senior for further pr
   event.preventDefault();
   }
 else{
-
+ document.getElementById('display5').innerHTML = " "; 
 
 document.getElementById('display1').innerHTML = def_arr[1];
 document.getElementById('display2').innerHTML = def_arr[3];
