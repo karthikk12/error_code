@@ -48,6 +48,8 @@ p.ex1 {
   <p style="text-align:left; font-size:20px">4)Category: <span style="color:Blue; font-size:20px ; font-weight:bold" id='display4'></span></p>
   </br>
   </br>
+  <hr>
+  <p  style="text-align:left; font-size:20px">Suggestion: <span style="color:Red; font-size:20px ; font-weight:bold" id='display5'></span></p>
   
 
    <script type="text/javascript">
@@ -60,6 +62,11 @@ var start_str0=document.getElementById("error_code").value;
  var str0=start_str0.trim();
  if(str0==''){
  alert('Please Enter some Inputs...');
+ event.preventDefault();
+ }
+   else if(str0==1001 || str0==1002 ){
+  var message2='There is some JIRA/Known Issue for this..Please check it out....'
+ document.getElementById('display5').innerHTML = message2;
  event.preventDefault();
  }
  else{
@@ -82,10 +89,13 @@ var xpath2="//tr["+i+"]"+"/td["+j+"]";
   def_arr[k++]=err_num.stringValue;
   }
   }
+
   
 }
 if(count==0){
+var message='Sorry Its not in out List..Please ask your TL/Senior for further proceed on this...!!!'
   alert('Invalid Error Code...Try again');
+  document.getElementById('display5').innerHTML = message;
   event.preventDefault();
   }
 else{
@@ -107,6 +117,7 @@ function clearFunction(){
    document.getElementById('display2').innerHTML = " "; 
    document.getElementById('display3').innerHTML = " "
 	 document.getElementById('display4').innerHTML = " ";
+     document.getElementById('display5').innerHTML = " "; 
 	  document.getElementById("error_code").reset();
    event.preventDefault();
    } 
