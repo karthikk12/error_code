@@ -97,6 +97,10 @@ var xpath2="//tr["+i+"]"+"/td["+j+"]";
   
 }
 if(count==0){
+ document.getElementById('display1').innerHTML=""
+   document.getElementById('display2').innerHTML = " "; 
+   document.getElementById('display3').innerHTML = " "
+	 document.getElementById('display4').innerHTML = " ";
 var message='Sorry Its not in out List..Please ask your TL/Senior for further proceed on this...!!!'
   alert('Invalid Error Code...Try again');
   document.getElementById('display5').innerHTML = message;
