@@ -69,7 +69,7 @@ p.ex1 {
 var start_str0=document.getElementById("error_code").value;   
  var str0=start_str0.trim();
  if(str0==''){
- alert('Please Enter some Inputs...');
+ alert('Please Enter some Inputs... Ex :324,101,108');
  event.preventDefault();
  }
    else if(str0==1001 || str0==1002 ){
@@ -79,6 +79,15 @@ var start_str0=document.getElementById("error_code").value;
 	 document.getElementById('display4').innerHTML = " ";
   var message2='There is some JIRA/Known Issue for this..Please check it out....'
  document.getElementById('display5').innerHTML = message2;
+ event.preventDefault();
+ }
+ else if(str0==323){
+ document.getElementById('display1').innerHTML=""
+   document.getElementById('display2').innerHTML = " "; 
+   document.getElementById('display3').innerHTML = " "
+	 document.getElementById('display4').innerHTML = " ";
+ var message3='If it is same account name and last 4 digit number...Try This JIRA'
+ document.getElementById('display5').innerHTML = message3;
  event.preventDefault();
  }
  else{
